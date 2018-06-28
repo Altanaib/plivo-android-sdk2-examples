@@ -52,10 +52,10 @@ public class RecentCallAdapter extends BaseAdapter {
         if (view == null) {
             LayoutInflater li = (LayoutInflater) _c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = li.inflate(R.layout.contact_list, null);
-            Log.e("Inside", "here--------------------------- In view1");
+            Log.e("Inside", "[RecentCallAdapter]-----------------------getView");
         } else {
             view = convertView;
-            Log.e("Inside", "here--------------------------- In view2");
+            Log.e("Inside", "[RecentCallAdapter]------------------------getView");
         }
 
         v = new ViewHolder();

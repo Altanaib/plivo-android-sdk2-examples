@@ -200,7 +200,7 @@ public class PhoneContacts extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                    Log.e("search", "here---------------- listener");
+                    Log.e("search", "[phoneContacts] onPostExecute---------------- listView.setOnItemClickListener");
 
                     SelectUser data = selectUsers.get(i);
                     addProd(data);

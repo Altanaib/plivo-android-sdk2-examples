@@ -39,29 +39,20 @@ public class ActiveCall extends AppCompatActivity implements EndPointListner {
     long updatedTime = 0L;
 
     private boolean backPressed = false;
-
     private Thread backPressedThread = null;
-
     private boolean isSpeakerOn = false;
-
     private boolean isCallInMuteState = false;
 
     TextView callTimer;
-
     TextView callTitle;
-
     TextView callerPhoneField;
 
     AppCompatImageView hangUpBtn;
-
     AppCompatImageView speakerBtn;
-
     AppCompatImageView micToggle;
 
     String phoneNumberStr;
-
     EditText dtmfText;
-
     Button dtmfBtn;
 
     @Override
@@ -80,7 +71,6 @@ public class ActiveCall extends AppCompatActivity implements EndPointListner {
         speakerBtn = (AppCompatImageView) findViewById(R.id.speaker);
         micToggle = (AppCompatImageView) findViewById(R.id.mic_toggle);
         hangUpBtn = (AppCompatImageView) findViewById(R.id.hang_up);
-
         dtmfText = (EditText) findViewById(R.id.editText2);
         dtmfBtn = (Button) findViewById(R.id.dtmfBtn);
 
@@ -120,15 +110,10 @@ public class ActiveCall extends AppCompatActivity implements EndPointListner {
         public void run() {
 
             timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
-
             updatedTime = timeSwapBuff + timeInMilliseconds;
-
             int secs = (int) (updatedTime / 1000);
-
             int mins = secs / 60;
-
             secs = secs % 60;
-
 
             callTimer.setText("" + mins + ":" + String.format(Locale.getDefault(), "%02d", secs));
             customHandler.postDelayed(this, 0);
@@ -144,7 +129,6 @@ public class ActiveCall extends AppCompatActivity implements EndPointListner {
         hangUpBtn.setOnClickListener(v -> {
             hangUp();
         });
-
 
         micToggle.setOnClickListener(v -> {
 
